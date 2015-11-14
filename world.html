@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <!-- Life would be so much easier if we could just look at the source code! -->
+  <title>Camelot</title>
+  <meta name="Author" content="Paul Hitz" />
+  <meta name="distribution" content="global" />
+  <meta name="Language" content="English" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <script type="text/javascript" src="js/ajaxHelper.js"></script>
+  <script type="text/javascript" src="js/textWorld.js"></script>
+  <style type="text/css">
+  body {
+      background-color: #000000;
+      color: #ffffff;
+  }
+
+  #console {
+      font-family: Courier New, Courier, mono;
+      font-size: 12pt;
+      background-color: #000000;
+      color: yellow;
+      border-width: 0px;
+      width: 100%;
+      overflow: hidden;
+  }
+
+  #user_input {
+      font-family: Courier New, Courier, mono;
+      font-size: 12pt;
+      background-color: #000000;
+      color: #ffffff;
+      float: right;
+      border-width: 0px;
+      width: 98%;
+  }
+
+  #cursor {
+      font-family: Courier New, Courier, mono;
+      font-size: 12pt;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: blink;
+      float: left;
+      padding-left: 1px;
+  }
+  </style>
+</head>
+
+<body onload="javascript:void+setupDisplay();" onunload="javascript:void+endGame();" onclick="javascript:+document.getElementById('user_input').focus();">
+
+  <div id="main">
+    <form action="" method="post" onsubmit="return processCommand()">
+      <textarea id="console" rows="30" readonly="readonly"></textarea><br />
+      <div>
+        <strong id="cursor">&gt;</strong>
+        <input type="text" id="user_input" value="" onkeyup="javascript:void+startGame(this.value)" />
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

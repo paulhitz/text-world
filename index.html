@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <!-- Life would be so much easier if we could just look at the source code! -->
+  <title>Text World</title>
+  <meta name="Author" content="Paul Hitz" />
+  <meta name="distribution" content="global" />
+  <meta name="Language" content="English" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+  <h1>- Text World -</h1>
+
+  <p>This is based on those old Text Adventure games that were popular many years ago. The idea is that you are given a text description of a location in a fantasy world and you are able to type commands to examine objects, move around the world and talk to game characters. The good ones told an interesting story and were fun to play. This is not a good one! :)</p>
+
+  <p>I call this a Text World because it is only semi-interactive. All you can do is move around. For example, type 'south' (or 's' for short) to move south. Other commands like 'examine', 'use', 'talk' etc are not implemented. Type 'help' in the game for more information.</p>
+
+  <p>The world is broken into a 5x5 grid. You start in the north-west corner so you can initially go s, se or e. There is a monastery on the western side of the map, a forest in the mid-lands, plains to the east and the south contains a large castle.</p>
+
+  <p><a href="javascript:void+window.open('world.html','textworld','top=50,left=150,height=600,width=800');">Enter the World</a></p>
+
+  <p><strong>Tech:</strong> It uses a MySQL database to store location and resource information. In the latest version, the frontend communicates with the backend using <span class="definition" title="Asynchronous JavaScript and XML">Ajax</span> which allows the world to be updated without a full page refresh (a major drawback of the old version). It has been successfully tested with recent versions of Firefox, Internet Explorer and Opera. Sorry <a href="http://lynx.browser.org/">Lynx</a> users, this version only works in browsers with JavaScript support.</p>
+</body>
+</html>
