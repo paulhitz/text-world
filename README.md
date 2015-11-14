@@ -20,4 +20,4 @@ In it's current form, it's no more than a technology prototype.
 
 **Tech**
 
-PHP And MySQL on the backend. Dodgy 2004-era JavaScript on the frontend. It uses Ajax for client-server communication which was cutting-edge (in 2004). 
+PHP and MySQL on the backend. Dodgy 2004-era JavaScript and XHTML on the frontend. It uses Ajax for client-server communication which was cutting-edge (in 2004). 

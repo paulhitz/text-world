@@ -1,4 +1,3 @@
 languages:
   JavaScript: true
-exclude_paths:
-- "js/*"
+  PHP: true
