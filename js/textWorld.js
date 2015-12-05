@@ -47,7 +47,7 @@ function setupDisplay()
 function processCommand()
 {
     var userInput = document.getElementById("user_input");
-    if (userInput.value != "")
+    if (userInput.value !== "")
     {
         processResponse(userInput.value); //Send the user input.
         userInput.value = "";             //Manually clear the textbox.
